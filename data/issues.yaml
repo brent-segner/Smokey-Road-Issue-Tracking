@@ -150,22 +150,28 @@ items:
       - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-06
-    title: "Flooring: acclimation and installation conditions"
+    title: "Flooring: installed without required temperature control and acclimation"
     area: "Whole House"
     type: Workmanship
     contract: Schumacher
     trade: Flooring
     status: Open
     description: >
-      The flooring appears to have been installed without an adequate acclimation
-      period. Doors and windows were also repeatedly left open while the homeowners
-      were paying for salamander-heater rental and propane.
+      The contract calls for Level 2 laminate (Restoration Collection, SC8630 Regent
+      Natural) in place of the included LVT in the main living areas and dining room,
+      and LVT in all baths. The manufacturers' installation guidelines for these
+      floors require the room and materials to be held within a set temperature
+      range before installation (24 to 72 hours), throughout installation, and for at
+      least 48 hours afterward. The flooring appears to have been installed without
+      an adequate acclimation period, and doors and windows were repeatedly left open
+      while the homeowners were paying for salamander-heater rental and propane.
     correction: >
-      Provide the manufacturer's written acclimation and installation requirements,
-      the dates and conditions of installation, and an explanation of how compliance
-      was ensured. Inspect for resulting problems and identify corrective action if
-      needed.
-    contract_ref: "pp. 12–13: Level 2 laminate flooring selections"
+      Provide the manufacturer's written acclimation and installation requirements
+      for each product, the installation dates, and the temperature and humidity
+      conditions before, during, and after installation, with an explanation of how
+      compliance was ensured. Inspect for resulting problems such as gapping,
+      peaking, or separation, and identify corrective action if needed.
+    contract_ref: "p. 12: Level 2 laminate in place of LVT, 1,053 sq ft (SC8630 Regent Natural); p. 13: Level 2 laminate in place of carpet, dining room; Included LVT, \"Prestige – Natural, all baths\"; p. 30, ¶15: homeowners pay for temporary heat during construction"
     photos: []
     notes: "No photos; condition not visible in a photo."
     history:
