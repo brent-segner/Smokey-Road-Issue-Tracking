@@ -74,9 +74,8 @@ schedule:
 impacts:
   intro: >
     Separate from the individual items above, several decisions made during
-    construction will keep costing us money and limiting how we can use the
-    property long after the open items are closed. We are recording them here so
-    they are part of the same record.
+    construction will continue to affect the property after the open items are
+    closed. We are recording them here so they are part of the same record.
   entries:
     - title: "Floor plan not reversed; well and septic moved away from the agreed location"
       related: [SR-38, SR-39]
