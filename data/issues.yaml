@@ -90,7 +90,8 @@ impacts:
       text: |
         Under the contract, homeowners pay for temporary heat during construction (p. 30, ¶15). Because the electrical and HVAC work is not yet complete, temporary heat is still needed well past the original completion estimates. As of November 20, 2026:
         - Heater rental: $723.
-        - Propane: about $2,500 and growing. Schumacher adds an 18% surcharge to the propane cost.
+        - Propane: about $2,500 and growing.
+        - Schumacher adds an 18% surcharge to items it orders on our behalf, which includes both the heater rental and the propane.
         - Both renew the first week of December if the electrical and HVAC work is not finished.
         - We have pointed out that the heaters run in the garage with the overhead and service doors open day and night (with the mud room door closed), and in the basement with the egress window open, so much of the heat is lost outside.
         We ask that doors and windows be kept closed while the heaters are running, and for a date when the permanent HVAC system will be operating.
@@ -784,8 +785,10 @@ items:
     description: >
       About 200 tons of gravel had to be brought in to make the driveway usable, on
       top of the gravel bought through Schumacher at the start of the project. The
-      site elevation should have led to the floor plan being reversed, as the
-      contract describes.
+      gravel bought through Schumacher was billed with Schumacher's 18% surcharge.
+      It was bundled with gravel for other areas, so the driveway portion is not
+      broken out, but the total was substantial. The site elevation should have led
+      to the floor plan being reversed, as the contract describes.
     correction: >
       Cannot be corrected at this stage. Resolution to be discussed.
     contract_ref: "p. 5: Garage Left, \"The garage should be positioned on the high side of your homesite. This will be verified by your Personal Builder at your Homesite Inspection.\""
