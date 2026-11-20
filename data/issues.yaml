@@ -74,8 +74,7 @@ items:
     contract_ref: "p. 10: Exterior Paint, \"Pure White front and rear porch posts\""
     photos: [SR-01-a.jpg, SR-01-b.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
-      - { date: "2026-11-19", note: "Clarified front posts and rear columns" }
+      - { date: "2026-11-19", note: "Added to report" }
 
 
   - id: SR-02
@@ -95,7 +94,7 @@ items:
     contract_ref: "p. 8: \"Front door and transom color: Black to match shutters\""
     photos: [SR-02-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-03
     title: "Window screens: missing throughout"
@@ -111,7 +110,7 @@ items:
     contract_ref: "p. 8: Included Windows, \"All operable windows will include screens\""
     photos: [SR-03-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-04
     title: "Fireplace mantel: stain not applied"
@@ -129,8 +128,7 @@ items:
     contract_ref: "p. 3: \"Fireplace finish: Natural stain Husk blend (stair stain sample)\""
     photos: [SR-04-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
-      - { date: "2026-11-19", note: "Added agreement to match trim stain" }
+      - { date: "2026-11-19", note: "Added to report" }
 
 
   - id: SR-05
@@ -149,7 +147,7 @@ items:
     contract_ref: "p. 7: Included Soffits, Fascia and Downspouts"
     photos: [SR-05-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-06
     title: "Flooring: acclimation and installation conditions"
@@ -171,7 +169,7 @@ items:
     photos: []
     notes: "No photos; condition not visible in a photo."
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-07
     title: "Interior doors: solid-core and hollow-core in wrong locations"
@@ -189,7 +187,7 @@ items:
     contract_ref: "p. 12: Stained poplar 2-panel solid doors ($12,500); 4 additional hollow-core doors ($904)"
     photos: []
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-08
     title: "Rear porch ceiling fan: one of two not installed"
@@ -206,7 +204,7 @@ items:
     contract_ref: "p. 4: Montague 60\" outdoor ceiling fan ×2, rear porch ($1,218)"
     photos: [SR-08-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-09
     title: "Rear roofline: visible dip; damaged fascia"
@@ -225,8 +223,7 @@ items:
     contract_ref: ""
     photos: [SR-09-a.jpg, SR-09-b.jpg, SR-09-c.jpg, SR-09-d.jpg, SR-09-e.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
-      - { date: "2026-11-19", note: "Added damaged fascia to this item" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-10
     title: "PVC pipe in front of rear basement window"
@@ -245,7 +242,7 @@ items:
     contract_ref: ""
     photos: [SR-10-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-11
     title: "Sump pump discharge: pipe ends next to the house"
@@ -263,7 +260,7 @@ items:
     contract_ref: ""
     photos: [SR-11-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-12
     title: "Porch concrete forms: wood left in place"
@@ -280,7 +277,7 @@ items:
     contract_ref: ""
     photos: [SR-12-a.jpg, SR-12-b.jpg, SR-12-c.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-13
     title: "Owner's bath floor register: does not fit opening"
@@ -298,7 +295,7 @@ items:
     contract_ref: ""
     photos: [SR-13-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-14
     title: "Outlets and switches: uneven heights and mismatched plates"
@@ -317,7 +314,7 @@ items:
     contract_ref: ""
     photos: [SR-14-a.jpg, SR-14-b.jpg, SR-14-c.jpg, SR-14-d.jpg, SR-14-e.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-15
     title: "Basement egress window: cement over frame; well missing security bolts"
@@ -336,7 +333,7 @@ items:
     contract_ref: "p. 6: Basement egress window system ($3,954): window, well, ladder, safety grate and cover"
     photos: [SR-15-a.jpg, SR-15-b.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-16
     title: "Kitchen island pendant: ceiling box poorly framed"
@@ -354,7 +351,7 @@ items:
     contract_ref: "p. 17: Cofield kitchen pendants ×3"
     photos: [SR-16-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-18
     title: "Granite countertops: gaps at walls beside refrigerator"
@@ -373,7 +370,7 @@ items:
     contract_ref: "p. 11: Level 1 granite, Crema Pearl, entire kitchen"
     photos: [SR-18-a.jpg, SR-18-b.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-19
     title: "Great Room ceiling fan rough-in: no cover, box unfinished"
@@ -391,7 +388,7 @@ items:
     contract_ref: ""
     photos: [SR-19-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-20
     title: "Owner's closet: drywall left open after electrical work"
@@ -408,7 +405,7 @@ items:
     contract_ref: ""
     photos: [SR-20-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-21
     title: "Paint: thin coverage and paint on cabinets and trim"
@@ -427,7 +424,7 @@ items:
     contract_ref: "p. 18: Painting, two coats, SW7529 Sand Beach"
     photos: [SR-21-a.jpg, SR-21-b.jpg, SR-21-c.jpg, SR-21-d.jpg, SR-21-e.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-22
     title: "Trim, doors, and walls: scratches and dents"
@@ -444,7 +441,7 @@ items:
     contract_ref: ""
     photos: [SR-22-a.jpg, SR-22-b.jpg, SR-22-c.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-23
     title: "Garage overhead door: large gap at frame"
@@ -461,7 +458,7 @@ items:
     contract_ref: "p. 8: Included 16' × 7' insulated garage door"
     photos: [SR-23-a.jpg, SR-23-b.jpg, SR-23-c.jpg, SR-23-d.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-24
     title: "Siding: hole at corner near garage"
@@ -478,7 +475,7 @@ items:
     contract_ref: ""
     photos: [SR-24-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-25
     title: "Owner's bath tile: caulk and grout overruns, raised edges"
@@ -496,7 +493,7 @@ items:
     contract_ref: "p. 16: Cannes Buff 12×12 tile, brushed nickel edge, Pale Umber #44 grout"
     photos: [SR-25-a.jpg, SR-25-b.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-26
     title: "TV outlet above fireplace: wrong box installed"
@@ -515,7 +512,7 @@ items:
     contract_ref: "Troyer agreement (homeowner-paid)"
     photos: [SR-26-a.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-27
     title: "Rear porch recessed lights: not aligned"
@@ -532,7 +529,7 @@ items:
     contract_ref: "p. 4: Recessed light with white trim ×4 ($708)"
     photos: [SR-27-a.jpg, SR-27-b.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-28
     title: "Kitchen island: outlet not installed"
@@ -550,7 +547,7 @@ items:
     contract_ref: ""
     photos: []
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-29
     title: "Outlet covers and exterior outlets: missing or unfinished"
@@ -568,7 +565,7 @@ items:
     contract_ref: "p. 19: Switch plate and outlet covers (entire home)"
     photos: [SR-29-a.jpg, SR-29-b.jpg]
     history:
-      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-30
     title: "Basement stairs: cracked and splintered treads"
@@ -603,7 +600,6 @@ items:
     photos: [SR-31-a.jpg]
     history:
       - { date: "2026-11-19", note: "Added to report" }
-      - { date: "2026-11-19", note: "Wording updated" }
 
 
   - id: SR-32
@@ -619,10 +615,9 @@ items:
     correction: >
       Install and test the motion-sensor flood light.
     contract_ref: "Troyer agreement (homeowner-paid)"
-    photos: [SR-32-a.jpg, SR-32-b.jpg]
+    photos: [SR-32-a.jpg]
     history:
       - { date: "2026-11-19", note: "Added to report" }
-      - { date: "2026-11-19", note: "Combined with flood light from SR-40 (same fixture); added second photo" }
 
   - id: SR-33
     title: "Quarter round: ends left raw and unstained"
@@ -672,7 +667,6 @@ items:
     photos: [SR-35-a.jpg]
     history:
       - { date: "2026-11-19", note: "Added to report" }
-      - { date: "2026-11-19", note: "Corrected location to top wall" }
 
 
   - id: SR-36
@@ -711,7 +705,6 @@ items:
     photos: [SR-37-a.jpg, SR-37-b.jpg]
     history:
       - { date: "2026-11-19", note: "Added to report" }
-      - { date: "2026-11-19", note: "Added photo of installed 50-amp outlet" }
 
 
   - id: SR-38
@@ -771,7 +764,6 @@ items:
     history:
       - { date: "2026-11-18", note: "Raised with Troyer by email" }
       - { date: "2026-11-19", note: "Added to report" }
-      - { date: "2026-11-19", note: "Flood light moved to SR-32 (same fixture as the motion-sensor light)" }
 
 
   - id: SR-41

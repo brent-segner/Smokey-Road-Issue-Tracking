@@ -10,6 +10,9 @@ Everything lives in **`data/issues.yaml`**:
 
 - **Change a status.** Edit the item's `status:` line, add a dated line under its
   `history:`, and change `last_updated` at the top of the file.
+- **What goes in `history:`** Only when an item was added, when Schumacher or
+  Troyer responded or commented, and when it was closed. Edits to our own wording
+  are not logged there; the commit history already records them.
 - **Record the builder's answer.** Add a `response:` line to the item. It shows
   on the page as "Builder response."
 - **Add an item.** Copy an existing block and give it the next ID (`SR-42`, ...).
