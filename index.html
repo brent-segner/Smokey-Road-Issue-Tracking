@@ -71,6 +71,19 @@
   #lb .cap{color:#ddd;font-size:14px;margin-top:10px}
   #lb button{position:absolute;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;padding:10px 18px}
   #lb .x{top:6px;right:6px}#lb .pv{left:4px;top:50%}#lb .nx{right:4px;top:50%}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:18px}
+  .panel h2{font-size:17px;margin:0 0 10px}
+  .alert{background:var(--open-bg);color:var(--open);border-radius:8px;padding:10px 12px;font-weight:600;margin-bottom:12px;font-size:14px}
+  table.sched{width:100%;border-collapse:collapse;font-size:14px}
+  table.sched th,table.sched td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}
+  table.sched th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+  table.sched td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  table.sched tr.sub td{background:#fafbfc;font-weight:600}
+  .late{color:var(--open);font-weight:600}
+  .impact{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
+  .impact h3{font-size:15px;margin:0 0 6px}
+  .impact ul{margin:6px 0;padding-left:20px}
+  .impact p{margin:0 0 6px}
   .print-only{display:none}
   @media (max-width:700px){.grid{grid-template-columns:1fr}.count{margin-left:0;width:100%}h1{font-size:20px}}
   @media print{
@@ -95,6 +108,10 @@
     details.hist>*{display:block}
     .b{background:none!important;border:1px solid #999!important;color:#222!important}
     h2.group{break-after:avoid;page-break-after:avoid}
+    .panel{padding:10px 12px;border-color:#bbb;break-inside:avoid}.panel h2{font-size:12pt}
+    table.sched{font-size:9pt}table.sched th,table.sched td{padding:3px 6px}
+    .alert{border:1px solid #b42318;padding:6px 8px}
+    #impacts{break-before:page}
   }
 </style>
 </head>
@@ -106,6 +123,7 @@
 <main>
   <section class="intro" id="intro"></section>
   <section class="stats" id="stats"></section>
+  <section class="panel" id="schedule" hidden></section>
   <section class="controls">
     <span><label for="grp">Group by</label><select id="grp">
       <option value="area">Area of house</option>
@@ -122,6 +140,7 @@
   </section>
   <p class="print-only" id="printnote"></p>
   <div id="list"></div>
+  <section class="panel" id="impacts" hidden></section>
 </main>
 <footer id="foot"></footer>
 <div id="lb" role="dialog" aria-modal="true"><button class="x" aria-label="Close">×</button><button class="pv" aria-label="Previous">‹</button><img alt=""><div class="cap"></div><button class="nx" aria-label="Next">›</button></div>
@@ -206,6 +225,39 @@ function stats(){
 
 window.addEventListener("beforeprint",()=>document.querySelectorAll("details.hist").forEach(d=>d.open=true));
 
+const DAY=864e5;
+const parseD=d=>{const [y,m,dd]=String(d).split("-").map(Number);return new Date(y,m-1,dd)};
+function renderSchedule(){
+  const S=DATA.schedule; if(!S) return;
+  const today=new Date(); today.setHours(0,0,0,0);
+  const last=(S.completion||[]).slice(-1)[0];
+  const over=last?Math.round((today-parseD(last.date))/DAY):0;
+  const row=(name,planned,actual)=>{
+    let diff="";
+    if(actual){const n=Math.round((parseD(actual)-parseD(planned))/DAY);diff=n>0?`<span class="late">${n} days late</span>`:n<0?`${-n} days early`:"On time";}
+    return `<tr><td>${esc(name)}</td><td class="num">${esc(fmtDate(planned))}</td><td class="num">${actual?esc(fmtDate(actual)):"—"}</td><td class="num">${diff}</td></tr>`};
+  const comp=(S.completion||[]).map(c=>{const n=Math.round((today-parseD(c.date))/DAY);
+    return `<tr><td>${esc(c.name)}</td><td class="num">${esc(fmtDate(c.date))}</td><td class="num">Not complete</td><td class="num">${n>0?`<span class="late">${n} days past</span>`:`${-n} days away`}</td></tr>`}).join("");
+  $("#schedule").innerHTML=`<h2>Project schedule</h2>
+    ${over>0?`<div class="alert">As of ${esc(today.toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"}))}, the home is ${over} days past the pessimistic completion date of ${esc(fmtDate(last.date))}.</div>`:""}
+    <table class="sched"><thead><tr><th>Milestone</th><th>Original date</th><th>Actual</th><th>Variance</th></tr></thead><tbody>
+    ${(S.milestones||[]).map(m=>row(m.name,m.planned,m.actual)).join("")}
+    <tr class="sub"><td colspan="4">Completion estimates given at contract</td></tr>${comp}</tbody></table>
+    ${S.note?`<p class="field" style="margin-top:10px">${esc(S.note)}</p>`:""}`;
+  $("#schedule").hidden=false;
+}
+function mdLite(t){ // paragraphs and "- " bullet lists only
+  const out=[];let ul=[];
+  String(t).trim().split("\n").forEach(l=>{if(/^\s*-\s+/.test(l)){ul.push(`<li>${esc(l.replace(/^\s*-\s+/,""))}</li>`)}else{if(ul.length){out.push(`<ul>${ul.join("")}</ul>`);ul=[]}if(l.trim())out.push(`<p>${esc(l)}</p>`)}});
+  if(ul.length)out.push(`<ul>${ul.join("")}</ul>`);return out.join("");
+}
+function renderImpacts(){
+  const I=DATA.impacts; if(!I||!(I.entries||[]).length) return;
+  $("#impacts").innerHTML=`<h2>Ongoing concerns and lasting impacts</h2>${I.intro?`<p class="field">${esc(I.intro)}</p>`:""}`+
+    I.entries.map(e=>`<div class="impact"><h3>${esc(e.title)}</h3>${mdLite(e.text)}${(e.related||[]).length?`<p class="field"><span class="k">Related items</span>${e.related.map(r=>`<a href="#${esc(r)}">${esc(r)}</a>`).join(", ")}</p>`:""}</div>`).join("");
+  $("#impacts").hidden=false;
+}
+
 // Lightbox
 let lbSet=[],lbI=0;
 function lbShow(){const it=items.find(x=>x.id===lbSet.id);const p=it.photos[lbI];$("#lb img").src="photos/"+p;$("#lb .cap").textContent=`${it.id}: photo ${lbI+1} of ${it.photos.length}`;}
@@ -226,7 +278,7 @@ fetch("data/issues.yaml",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r
   TYPE_ORDER.filter(v=>items.some(i=>i.type===v)).forEach(v=>$("#ft").insertAdjacentHTML("beforeend",`<option>${esc(v)}</option>`));
   STATUS_ORDER.forEach(v=>$("#fs").insertAdjacentHTML("beforeend",`<option>${esc(v)}</option>`));
   $("#foot").innerHTML=R.repo?`Change history for this report: <a href="https://github.com/${esc(R.repo)}/commits/main">github.com/${esc(R.repo)}/commits</a>`:"";
-  readState(); stats(); render();
+  readState(); stats(); renderSchedule(); render(); renderImpacts();
   ["#grp","#fc","#ft","#fs"].forEach(s=>$(s).addEventListener("change",render)); $("#q").addEventListener("input",render);
   document.body.dataset.ready="1";
 }).catch(err=>{$("#list").innerHTML=`<p>Could not load data/issues.yaml (${esc(err.message)}).</p>`;document.body.dataset.ready="1"});

@@ -18,7 +18,7 @@ report:
   title: "Smokey Road Build: Outstanding Items & Correction Report"
   homeowners: "Deanna and Brent Segner"
   builder: "Schumacher Homes"
-  last_updated: "2026-11-19"
+  last_updated: "2026-11-20"
   # GitHub repo as owner/name. Used for the "Comment on this item" links.
   repo: "brent-segner/Smokey-Road-Issue-Tracking"
   intro: >
@@ -54,6 +54,39 @@ areas:
   - "Basement"
   - "Whole House"
   - "Site & Driveway"
+
+# Original project schedule, as provided at contract. Fill in `actual:` as dates are known.
+schedule:
+  milestones:
+    - { name: "Contract signed", planned: "2026-04-23", actual: "2026-04-23" }
+    - { name: "Closing (construction loan)", planned: "2026-05-28" }
+    - { name: "Break ground", planned: "2026-06-30" }
+    - { name: "Foundation", planned: "2026-07-01" }
+    - { name: "Framing", planned: "2026-07-25" }
+  completion:
+    - { name: "Optimistic completion", date: "2026-09-28" }
+    - { name: "Realistic completion", date: "2026-10-19" }
+    - { name: "Pessimistic completion", date: "2026-11-02" }
+  note: >
+    The home is not yet complete. Every completion estimate given at the start of
+    the project, including the pessimistic one, has now passed.
+
+# Longer-term consequences that will outlast the punch list.
+impacts:
+  intro: >
+    Separate from the individual items above, several decisions made during
+    construction will keep costing us money and limiting how we can use the
+    property long after the open items are closed. We are recording them here so
+    they are part of the same record.
+  entries:
+    - title: "Floor plan not reversed; well and septic moved away from the agreed location"
+      related: [SR-38, SR-39]
+      text: |
+        The contract states that the garage should be on the high side of the homesite and that this would be verified at the homesite inspection (p. 5). The plan was not reversed to meet that requirement, and it set off a series of further changes:
+        - Schumacher moved the septic and well away from the originally agreed location between the house and the pole barn pad.
+        - We have already paid Bushong (well drilling) thousands of dollars to run a water line out to the pole barn pad.
+        - The pole barn will now need its own compact septic system to pump to the mound, at a cost of thousands more, instead of sharing the house's system as planned.
+        - The same decision led to the extra driveway gravel in SR-39 and the unusable wet bar rough-in and steel beam in SR-38.
 
 items:
 
@@ -817,3 +850,22 @@ items:
     history:
       - { date: "2026-09-08", note: "Requested from Hollie Curry, Steven Price, Steve Troyer, and Jessica Moore" }
       - { date: "2026-11-19", note: "Added to report" }
+
+  - id: SR-43
+    title: "Septic alarm: not installed or mounted"
+    area: "Exterior: Rear & Sides"
+    type: Incomplete
+    contract: Schumacher
+    trade: Septic installer
+    status: Open
+    description: >
+      The septic system alarm has not been installed and mounted on the house. We
+      were told it was waiting on the septic installer to obtain the alarm.
+    correction: >
+      Install, mount, wire, and test the septic alarm, and confirm a date for the
+      work.
+    contract_ref: "p. 21: Septic install, \"4 bedroom time dosed sand mound designed and installed to UCHD specs\""
+    photos: [SR-36-a.jpg]
+    notes: "Photo shared with SR-36 (same exterior wall)."
+    history:
+      - { date: "2026-11-20", note: "Added to report" }
