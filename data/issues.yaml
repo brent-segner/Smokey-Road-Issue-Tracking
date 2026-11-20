@@ -55,21 +55,20 @@ areas:
   - "Whole House"
   - "Site & Driveway"
 
-# Original project schedule, as provided at contract. Fill in `actual:` as dates are known.
+# Project schedule. Add milestones as they are completed.
 schedule:
   milestones:
-    - { name: "Contract signed", planned: "2026-04-23", actual: "2026-04-23" }
-    - { name: "Closing (construction loan)", planned: "2026-05-28" }
-    - { name: "Break ground", planned: "2026-06-30" }
-    - { name: "Foundation", planned: "2026-07-01" }
-    - { name: "Framing", planned: "2026-07-25" }
+    - { name: "Contract signed", date: "2026-04-23" }
+    - { name: "Closing (construction loan)", date: "2026-05-28" }
+    - { name: "Break ground", date: "2026-06-30" }
+    - { name: "Foundation", date: "2026-07-01" }
+    - { name: "Framing", date: "2026-07-25" }
+    - { name: "Drywall complete", date: "2026-09-29" }
+    - { name: "Trim complete", date: "2026-10-27" }
   completion:
     - { name: "Optimistic completion", date: "2026-09-28" }
     - { name: "Realistic completion", date: "2026-10-19" }
     - { name: "Pessimistic completion", date: "2026-11-02" }
-  note: >
-    The home is not yet complete. Every completion estimate given at the start of
-    the project, including the pessimistic one, has now passed.
 
 # Longer-term consequences that will outlast the punch list.
 impacts:
@@ -84,8 +83,8 @@ impacts:
       text: |
         The contract states that the garage should be on the high side of the homesite and that this would be verified at the homesite inspection (p. 5). The plan was not reversed to meet that requirement, and it set off a series of further changes:
         - Schumacher moved the septic and well away from the originally agreed location between the house and the pole barn pad.
-        - We have already paid Bushong (well drilling) thousands of dollars to run a water line out to the pole barn pad.
-        - The pole barn will now need its own compact septic system to pump to the mound, at a cost of thousands more, instead of sharing the house's system as planned.
+        - Bushong (well drilling) quoted $3,391 to run a water line out to the pole barn pad.
+        - The pole barn will now need its own compact septic system to pump to the mound, instead of sharing the house's system as planned. That cost will be quoted after this project is complete.
         - The same decision led to the extra driveway gravel in SR-39 and the unusable wet bar rough-in and steel beam in SR-38.
 
 items:

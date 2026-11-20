@@ -229,21 +229,11 @@ const DAY=864e5;
 const parseD=d=>{const [y,m,dd]=String(d).split("-").map(Number);return new Date(y,m-1,dd)};
 function renderSchedule(){
   const S=DATA.schedule; if(!S) return;
-  const today=new Date(); today.setHours(0,0,0,0);
-  const last=(S.completion||[]).slice(-1)[0];
-  const over=last?Math.round((today-parseD(last.date))/DAY):0;
-  const row=(name,planned,actual)=>{
-    let diff="";
-    if(actual){const n=Math.round((parseD(actual)-parseD(planned))/DAY);diff=n>0?`<span class="late">${n} days late</span>`:n<0?`${-n} days early`:"On time";}
-    return `<tr><td>${esc(name)}</td><td class="num">${esc(fmtDate(planned))}</td><td class="num">${actual?esc(fmtDate(actual)):"—"}</td><td class="num">${diff}</td></tr>`};
-  const comp=(S.completion||[]).map(c=>{const n=Math.round((today-parseD(c.date))/DAY);
-    return `<tr><td>${esc(c.name)}</td><td class="num">${esc(fmtDate(c.date))}</td><td class="num">Not complete</td><td class="num">${n>0?`<span class="late">${n} days past</span>`:`${-n} days away`}</td></tr>`}).join("");
+  const rows=(list,label)=>(list||[]).map(m=>`<tr><td>${esc(m.name)}</td><td class="num">${esc(fmtDate(m.date))}</td><td>${label}</td></tr>`).join("");
   $("#schedule").innerHTML=`<h2>Project schedule</h2>
-    ${over>0?`<div class="alert">As of ${esc(today.toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"}))}, the home is ${over} days past the pessimistic completion date of ${esc(fmtDate(last.date))}.</div>`:""}
-    <table class="sched"><thead><tr><th>Milestone</th><th>Original date</th><th>Actual</th><th>Variance</th></tr></thead><tbody>
-    ${(S.milestones||[]).map(m=>row(m.name,m.planned,m.actual)).join("")}
-    <tr class="sub"><td colspan="4">Completion estimates given at contract</td></tr>${comp}</tbody></table>
-    ${S.note?`<p class="field" style="margin-top:10px">${esc(S.note)}</p>`:""}`;
+    <table class="sched"><thead><tr><th>Milestone</th><th>Date</th><th></th></tr></thead><tbody>
+    ${rows(S.milestones,"Completed")}
+    <tr class="sub"><td colspan="3">Completion estimates provided at contract</td></tr>${rows(S.completion,"Estimate")}</tbody></table>`;
   $("#schedule").hidden=false;
 }
 function mdLite(t){ // paragraphs and "- " bullet lists only
