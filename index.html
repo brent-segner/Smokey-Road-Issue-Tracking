@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smokey Road Build: Outstanding Items</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --ink:#1d232b; --muted:#5d6774; --line:#dfe3e8; --bg:#f6f7f9; --card:#fff;
+    --accent:#24476b;
+    --open:#b42318; --open-bg:#fdecea;
+    --ack:#8a5a00; --ack-bg:#fff4dc;
+    --sched:#1f5fa8; --sched-bg:#e7f0fb;
+    --prog:#5b3fa8; --prog-bg:#efeafb;
+    --done:#1e7a46; --done-bg:#e5f5ec;
+    --nc:#4a4f57; --nc-bg:#eceef1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  header{background:var(--accent);color:#fff;padding:28px 24px 22px}
+  header .wrap,main{max-width:1080px;margin:0 auto}
+  h1{margin:0 0 4px;font-size:24px;line-height:1.25;font-weight:650}
+  .sub{opacity:.85;font-size:14px}
+  main{padding:20px 24px 60px}
+  .intro{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:18px;font-size:14px;color:#333}
+  .intro p{margin:0 0 8px}.intro p:last-child{margin:0}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:18px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .stat b{display:block;font-size:24px;line-height:1.1;font-variant-numeric:tabular-nums}
+  .stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .controls{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0 12px;border-bottom:1px solid var(--line);margin-bottom:16px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+  .controls label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-right:4px}
+  select,input[type=search]{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+  input[type=search]{min-width:200px}
+  .count{margin-left:auto;font-size:13px;color:var(--muted)}
+  h2.group{font-size:17px;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--accent);display:flex;justify-content:space-between;align-items:baseline}
+  h2.group small{font-weight:400;color:var(--muted);font-size:13px}
+  .item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:12px;break-inside:avoid;page-break-inside:avoid}
+  .item.closed{opacity:.72}
+  .head{display:flex;gap:12px;align-items:flex-start}
+  .id{font-weight:700;font-variant-numeric:tabular-nums;color:var(--accent);white-space:nowrap;padding-top:1px}
+  .title{font-weight:600;font-size:16px;flex:1}
+  .badges{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
+  .b{font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:#fafbfc;white-space:nowrap}
+  .b.status{font-weight:650;border:0}
+  .s-Open{color:var(--open);background:var(--open-bg)}
+  .s-Acknowledged{color:var(--ack);background:var(--ack-bg)}
+  .s-Scheduled{color:var(--sched);background:var(--sched-bg)}
+  .s-In-progress{color:var(--prog);background:var(--prog-bg)}
+  .s-Resolved{color:var(--done);background:var(--done-bg)}
+  .s-Not-correctable{color:var(--nc);background:var(--nc-bg)}
+  .b.troyer{border-color:#c9b37a;background:#fbf6e8;color:#6d5410}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 22px}
+  .field{font-size:14px;margin:0 0 6px}
+  .field .k{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:1px}
+  .field.full{grid-column:1/-1}
+  .photos{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .photos a{display:block;width:118px;height:118px;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:#eee}
+  .photos img{width:100%;height:100%;object-fit:cover;display:block}
+  .nophoto{font-size:13px;color:var(--muted);font-style:italic}
+  details.hist{margin-top:10px;font-size:13px;color:var(--muted)}
+  details.hist summary{cursor:pointer}
+  details.hist ul{margin:6px 0 0;padding-left:18px}
+  .actions{margin-top:8px;font-size:13px}
+  .actions a{color:var(--accent)}
+  footer{max-width:1080px;margin:0 auto;padding:0 24px 40px;font-size:13px;color:var(--muted)}
+  #lb{position:fixed;inset:0;background:rgba(10,12,16,.92);display:none;align-items:center;justify-content:center;z-index:50;flex-direction:column}
+  #lb.on{display:flex}
+  #lb img{max-width:94vw;max-height:84vh;border-radius:4px}
+  #lb .cap{color:#ddd;font-size:14px;margin-top:10px}
+  #lb button{position:absolute;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;padding:10px 18px}
+  #lb .x{top:6px;right:6px}#lb .pv{left:4px;top:50%}#lb .nx{right:4px;top:50%}
+  .print-only{display:none}
+  @media (max-width:700px){.grid{grid-template-columns:1fr}.count{margin-left:0;width:100%}h1{font-size:20px}}
+  @media print{
+    @page{size:Letter;margin:.55in .5in}
+    body{background:#fff;font-size:9.5pt;line-height:1.4}
+    h1{font-size:16pt}
+    .stats{grid-template-columns:repeat(6,1fr);gap:6px}.stat{padding:6px 8px}.stat b{font-size:15pt}.stat span{font-size:7pt}
+    .intro{padding:8px 10px;font-size:9pt}
+    .title{font-size:10.5pt}.badges{margin:4px 0 6px}.b{font-size:7.5pt;padding:1px 6px}
+    .grid{gap:0 16px}.field{font-size:9pt;margin-bottom:3px}.field .k{font-size:7pt}
+    details.hist summary{display:none}details.hist ul{margin:2px 0 0;padding:0;list-style:none;font-size:8pt}
+    details.hist li{display:inline}details.hist li+li:before{content:" · "}
+    h2.group{font-size:12pt;margin:14px 0 6px}
+    header{background:none;color:var(--ink);padding:0 0 8px;border-bottom:2px solid var(--ink)}
+    main{padding:10px 0 0;max-width:none}
+    .controls,.actions,#lb,.screen-only{display:none!important}
+    .print-only{display:block}
+    .intro,.stat,.item{border-color:#bbb}
+    .item{padding:10px 12px;margin-bottom:8px}
+    .photos a{width:1.1in;height:1.1in}.photos{gap:5px;margin-top:4px}
+    details.hist{display:block}
+    details.hist>*{display:block}
+    .b{background:none!important;border:1px solid #999!important;color:#222!important}
+    h2.group{break-after:avoid;page-break-after:avoid}
+  }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1 id="t">Smokey Road Build: Outstanding Items</h1>
+  <div class="sub" id="meta">Loading…</div>
+</div></header>
+<main>
+  <section class="intro" id="intro"></section>
+  <section class="stats" id="stats"></section>
+  <section class="controls">
+    <span><label for="grp">Group by</label><select id="grp">
+      <option value="area">Area of house</option>
+      <option value="contract">Responsible party</option>
+      <option value="type">Type of issue</option>
+      <option value="status">Status</option>
+      <option value="none">ID order</option>
+    </select></span>
+    <span><label for="fc">Party</label><select id="fc"><option value="">All</option></select></span>
+    <span><label for="ft">Type</label><select id="ft"><option value="">All</option></select></span>
+    <span><label for="fs">Status</label><select id="fs"><option value="">All</option><option value="__active">Not yet resolved</option></select></span>
+    <input type="search" id="q" placeholder="Search items…" aria-label="Search items">
+    <span class="count" id="count"></span>
+  </section>
+  <p class="print-only" id="printnote"></p>
+  <div id="list"></div>
+</main>
+<footer id="foot"></footer>
+<div id="lb" role="dialog" aria-modal="true"><button class="x" aria-label="Close">×</button><button class="pv" aria-label="Previous">‹</button><img alt=""><div class="cap"></div><button class="nx" aria-label="Next">›</button></div>
+
+<script src="assets/js-yaml.min.js"></script>
+<script>
+const STATUS_ORDER=["Open","Acknowledged","Scheduled","In progress","Resolved","Not correctable"];
+const TYPE_ORDER=["Incomplete","Defect","Workmanship","Not as contracted"];
+const CLOSED=new Set(["Resolved"]);
+let DATA, items=[];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const cls=s=>"s-"+String(s).replace(/\s+/g,"-");
+const fmtDate=d=>{if(!d)return"";const [y,m,dd]=String(d).split("-").map(Number);return new Date(y,m-1,dd).toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})};
+
+function readState(){const p=new URLSearchParams(location.hash.slice(1));
+  $("#grp").value=p.get("g")||"area";$("#fc").value=p.get("c")||"";$("#ft").value=p.get("t")||"";$("#fs").value=p.get("s")||"";$("#q").value=p.get("q")||"";}
+function writeState(){const p=new URLSearchParams();
+  [["g",$("#grp").value,"area"],["c",$("#fc").value,""],["t",$("#ft").value,""],["s",$("#fs").value,""],["q",$("#q").value,""]].forEach(([k,v,d])=>{if(v!==d)p.set(k,v)});
+  history.replaceState(null,"",p.toString()?"#"+p:location.pathname);}
+
+function commentLink(it){
+  const repo=DATA.report.repo; if(!repo) return "";
+  const u=`https://github.com/${repo}/issues/new?title=${encodeURIComponent(it.id+": "+it.title)}&body=${encodeURIComponent("Regarding "+it.id+":\n\n")}`;
+  return `<div class="actions"><a href="${u}" target="_blank" rel="noopener">Comment on ${esc(it.id)} ↗</a></div>`;
+}
+
+function card(it){
+  const tro=it.contract.startsWith("Troyer");
+  const photos=(it.photos||[]).length
+    ? `<div class="photos">${it.photos.map((p,i)=>`<a href="photos/${esc(p)}" data-id="${esc(it.id)}" data-i="${i}"><img loading="lazy" src="photos/thumbs/${esc(p)}" alt="${esc(it.id)} photo ${i+1}"></a>`).join("")}</div>`
+    : `<div class="nophoto">${esc(it.notes||"No photo on file.")}</div>`;
+  const hist=(it.history||[]).length?`<details class="hist"><summary>History (${it.history.length})</summary><ul>${it.history.map(h=>`<li><b>${esc(fmtDate(h.date))}</b>: ${esc(h.note)}</li>`).join("")}</ul></details>`:"";
+  return `<article class="item ${CLOSED.has(it.status)?"closed":""}" id="${esc(it.id)}">
+    <div class="head"><span class="id">${esc(it.id)}</span><span class="title">${esc(it.title)}</span></div>
+    <div class="badges"><span class="b status ${cls(it.status)}">${esc(it.status)}</span>
+      <span class="b ${tro?"troyer":""}">${tro?"Troyer, homeowner contract":"Schumacher contract"}</span>
+      <span class="b">${esc(it.type)}</span><span class="b">${esc(it.area)}</span><span class="b">Trade: ${esc(it.trade)}</span></div>
+    <div class="grid">
+      <p class="field"><span class="k">Issue</span>${esc(String(it.description).trim()).replace(/\n/g,"<br>")}</p>
+      <p class="field"><span class="k">Requested correction</span>${esc(it.correction)}</p>
+      ${it.contract_ref?`<p class="field full"><span class="k">Contract reference</span>${esc(it.contract_ref)}</p>`:""}
+      ${(it.links||[]).length?`<p class="field full"><span class="k">Links</span>${it.links.map(l=>`<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join(" · ")}</p>`:""}
+      ${it.response?`<p class="field full"><span class="k">Builder response</span>${esc(it.response)}</p>`:""}
+    </div>
+    ${photos}${hist}${commentLink(it)}
+  </article>`;
+}
+
+function render(){
+  writeState();
+  const g=$("#grp").value,c=$("#fc").value,t=$("#ft").value,s=$("#fs").value,q=$("#q").value.trim().toLowerCase();
+  const shown=items.filter(it=>(!c||it.contract===c)&&(!t||it.type===t)&&(!s||(s==="__active"?!CLOSED.has(it.status)&&it.status!=="Not correctable":it.status===s))
+    &&(!q||[it.id,it.title,it.description,it.area,it.trade,it.correction].join(" ").toLowerCase().includes(q)));
+  $("#count").textContent=`Showing ${shown.length} of ${items.length} items`;
+  let order, key;
+  if(g==="area"){order=DATA.areas;key=it=>it.area}
+  else if(g==="contract"){order=["Schumacher","Troyer (homeowner contract)"];key=it=>it.contract}
+  else if(g==="type"){order=TYPE_ORDER;key=it=>it.type}
+  else if(g==="status"){order=STATUS_ORDER;key=it=>it.status}
+  let html="";
+  if(g==="none") html=shown.map(card).join("");
+  else{
+    const extra=[...new Set(shown.map(key))].filter(k=>!order.includes(k));
+    for(const grp of [...order,...extra]){
+      const its=shown.filter(it=>key(it)===grp); if(!its.length) continue;
+      const label=g==="contract"&&grp==="Schumacher"?"Schumacher contract":grp==="Troyer (homeowner contract)"?"Troyer Electric (homeowner contract)":grp;
+      const open=its.filter(it=>!CLOSED.has(it.status)).length;
+      html+=`<h2 class="group">${esc(label)}<small>${its.length} item${its.length>1?"s":""} · ${open} not resolved</small></h2>`+its.map(card).join("");
+    }
+  }
+  $("#list").innerHTML=html||`<p>No items match these filters.</p>`;
+}
+
+function stats(){
+  const n=items.length,by=k=>items.filter(it=>it.status===k).length;
+  const res=by("Resolved"),nc=by("Not correctable"),active=n-res-nc;
+  const tro=items.filter(it=>it.contract.startsWith("Troyer")).length;
+  $("#stats").innerHTML=[[n,"Total items"],[active,"Awaiting correction"],[res,"Resolved"],[nc,"Not correctable"],[n-tro,"Schumacher contract"],[tro,"Troyer (homeowner)"]]
+    .map(([v,l])=>`<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
+}
+
+window.addEventListener("beforeprint",()=>document.querySelectorAll("details.hist").forEach(d=>d.open=true));
+
+// Lightbox
+let lbSet=[],lbI=0;
+function lbShow(){const it=items.find(x=>x.id===lbSet.id);const p=it.photos[lbI];$("#lb img").src="photos/"+p;$("#lb .cap").textContent=`${it.id}: photo ${lbI+1} of ${it.photos.length}`;}
+document.addEventListener("click",e=>{const a=e.target.closest(".photos a");if(!a)return;e.preventDefault();lbSet={id:a.dataset.id};lbI=+a.dataset.i;lbShow();$("#lb").classList.add("on")});
+$("#lb .x").onclick=()=>$("#lb").classList.remove("on");
+$("#lb").addEventListener("click",e=>{if(e.target.id==="lb")$("#lb").classList.remove("on")});
+const step=d=>{const it=items.find(x=>x.id===lbSet.id);lbI=(lbI+d+it.photos.length)%it.photos.length;lbShow()};
+$("#lb .pv").onclick=()=>step(-1);$("#lb .nx").onclick=()=>step(1);
+document.addEventListener("keydown",e=>{if(!$("#lb").classList.contains("on"))return;if(e.key==="Escape")$("#lb").classList.remove("on");if(e.key==="ArrowLeft")step(-1);if(e.key==="ArrowRight")step(1)});
+
+fetch("data/issues.yaml",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}).then(txt=>{
+  DATA=jsyaml.load(txt); items=DATA.items; const R=DATA.report;
+  document.title=R.title; $("#t").textContent=R.title;
+  $("#meta").textContent=`${R.homeowners} · Builder: ${R.builder} · Last updated ${fmtDate(R.last_updated)}`;
+  $("#intro").innerHTML=[R.intro,R.request,R.disclaimer].filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join("");
+  $("#printnote").textContent=`Printed ${new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})}. Current version is kept online; item IDs do not change between versions.`;
+  [...new Set(items.map(i=>i.contract))].forEach(v=>$("#fc").insertAdjacentHTML("beforeend",`<option>${esc(v)}</option>`));
+  TYPE_ORDER.filter(v=>items.some(i=>i.type===v)).forEach(v=>$("#ft").insertAdjacentHTML("beforeend",`<option>${esc(v)}</option>`));
+  STATUS_ORDER.forEach(v=>$("#fs").insertAdjacentHTML("beforeend",`<option>${esc(v)}</option>`));
+  $("#foot").innerHTML=R.repo?`Change history for this report: <a href="https://github.com/${esc(R.repo)}/commits/main">github.com/${esc(R.repo)}/commits</a>`:"";
+  readState(); stats(); render();
+  ["#grp","#fc","#ft","#fs"].forEach(s=>$(s).addEventListener("change",render)); $("#q").addEventListener("input",render);
+  document.body.dataset.ready="1";
+}).catch(err=>{$("#list").innerHTML=`<p>Could not load data/issues.yaml (${esc(err.message)}).</p>`;document.body.dataset.ready="1"});
+</script>
+</body>
+</html>

@@ -1,0 +1,821 @@
+# ---------------------------------------------------------------------------
+# Smokey Road build: outstanding items
+#
+# HOW TO UPDATE
+#   - Change an item's status: edit its `status:` line and add a line under
+#     `history:` with today's date and what changed.
+#   - Add an item: copy an existing block, give it the next ID (SR-40, SR-41...),
+#     and put its photos in /photos named SR-40-a.jpg, SR-40-b.jpg, ...
+#   - Never reuse or renumber an ID, even if an item is withdrawn.
+#
+# Allowed values
+#   status:   Open | Acknowledged | Scheduled | In progress | Resolved | Not correctable
+#   type:     Incomplete | Defect | Workmanship | Not as contracted
+#   contract: Schumacher | Troyer (homeowner contract)
+# ---------------------------------------------------------------------------
+
+report:
+  title: "Smokey Road Build: Outstanding Items & Correction Report"
+  homeowners: "Deanna and Brent Segner"
+  builder: "Schumacher Homes"
+  last_updated: "2026-11-19"
+  # GitHub repo as owner/name. Used for the "Comment on this item" links.
+  repo: "brent-segner/Smokey-Road-Issue-Tracking"
+  intro: >
+    This report documents items identified during our review of the home that
+    appear to be incomplete, inconsistent with the contract or agreed
+    specifications, improperly installed, or in need of workmanship correction.
+    It does not list routine construction tasks that remain before completion
+    (for example, installation of toilets or ordinary plumbing connections).
+    Contract page references are to the Schumacher Homes Custom Home Quote and
+    Construction Agreement dated 4/23/2026.
+  request: >
+    For each item, please provide a written response identifying (1) whether the
+    item is acknowledged, (2) the proposed correction or inspection, (3) the trade
+    or person responsible, and (4) the anticipated completion date. Work postponed
+    for weather should stay on the list with a specific plan for completion.
+    Items requiring technical review should not be closed until the findings and
+    any corrective work are documented.
+  disclaimer: >
+    This report supports a complete and accurate review of the home before final
+    acceptance. It does not waive any contractual rights or constitute acceptance
+    of incomplete or potentially deficient work.
+
+# Areas are listed in walkthrough order; the page groups items in this order.
+areas:
+  - "Exterior: Front & Porches"
+  - "Exterior: Rear & Sides"
+  - "Roof"
+  - "Garage"
+  - "Great Room & Fireplace"
+  - "Kitchen"
+  - "Owner's Suite"
+  - "Bedroom 3"
+  - "Basement"
+  - "Whole House"
+  - "Site & Driveway"
+
+items:
+
+  - id: SR-01
+    title: "Front and rear porch posts: painting not done"
+    area: "Exterior: Front & Porches"
+    type: Incomplete
+    contract: Schumacher
+    trade: Painting
+    status: Open
+    description: >
+      Both the front porch posts and the rear porch columns remain unpainted. The
+      contract specifies Pure White front and rear porch posts.
+    correction: >
+      Do not paint in temperatures or conditions that prevent proper application,
+      adhesion, or curing. Provide a weather-appropriate plan and confirm the finish
+      will meet the specified appearance.
+    contract_ref: "p. 10: Exterior Paint, \"Pure White front and rear porch posts\""
+    photos: [SR-01-a.jpg, SR-01-b.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Clarified front posts and rear columns" }
+
+
+  - id: SR-02
+    title: "Front entry door and transom: black finish not applied; doorbell missing"
+    area: "Exterior: Front & Porches"
+    type: Incomplete
+    contract: Schumacher
+    trade: Painting
+    status: Open
+    description: >
+      The front door and transom are specified to be black but remain unfinished.
+      The photo also shows that the doorbell has not been installed.
+    correction: >
+      As with the porch posts, do not paint in unsuitable cold-weather conditions;
+      identify a method and schedule that will produce a durable finish. Install
+      the doorbell.
+    contract_ref: "p. 8: \"Front door and transom color: Black to match shutters\""
+    photos: [SR-02-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-03
+    title: "Window screens: missing throughout"
+    area: "Whole House"
+    type: Incomplete
+    contract: Schumacher
+    trade: Windows
+    status: Open
+    description: >
+      Screens are missing from the windows throughout the home.
+    correction: >
+      Supply and install the specified screens, verifying fit and operation.
+    contract_ref: "p. 8: Included Windows, \"All operable windows will include screens\""
+    photos: [SR-03-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-04
+    title: "Fireplace mantel: stain not applied"
+    area: "Great Room & Fireplace"
+    type: Incomplete
+    contract: Schumacher
+    trade: Finish carpentry
+    status: Open
+    description: >
+      The rough-sawn cedar mantel has not been stained the color specified in the
+      contract. It was agreed that the mantel stain would match the trim stain.
+    correction: >
+      Stain the mantel to match the trim, confirming the color before finishing, and protect the adjacent stone,
+      walls, and flooring.
+    contract_ref: "p. 3: \"Fireplace finish: Natural stain Husk blend (stair stain sample)\""
+    photos: [SR-04-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added agreement to match trim stain" }
+
+
+  - id: SR-05
+    title: "Gutter downspouts: drainage extensions not completed"
+    area: "Exterior: Rear & Sides"
+    type: Incomplete
+    contract: Schumacher
+    trade: Gutters / site drainage
+    status: Open
+    description: >
+      Downspouts do not have completed discharge pipes and currently release water
+      directly beside the foundation.
+    correction: >
+      Complete the discharge system and direct water away from the foundation,
+      consistent with the site drainage plan.
+    contract_ref: "p. 7: Included Soffits, Fascia and Downspouts"
+    photos: [SR-05-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-06
+    title: "Flooring: acclimation and installation conditions"
+    area: "Whole House"
+    type: Workmanship
+    contract: Schumacher
+    trade: Flooring
+    status: Open
+    description: >
+      The flooring appears to have been installed without an adequate acclimation
+      period. Doors and windows were also repeatedly left open while the homeowners
+      were paying for salamander-heater rental and propane.
+    correction: >
+      Provide the manufacturer's written acclimation and installation requirements,
+      the dates and conditions of installation, and an explanation of how compliance
+      was ensured. Inspect for resulting problems and identify corrective action if
+      needed.
+    contract_ref: "pp. 12–13: Level 2 laminate flooring selections"
+    photos: []
+    notes: "No photos; condition not visible in a photo."
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-07
+    title: "Interior doors: solid-core and hollow-core in wrong locations"
+    area: "Whole House"
+    type: Not as contracted
+    contract: Schumacher
+    trade: Doors / trim
+    status: Open
+    description: >
+      Several solid-core and hollow-core doors appear to be installed in locations
+      that do not match the contract.
+    correction: >
+      Compare each door location with the contract, selections, and door schedule;
+      replace or relocate doors as required.
+    contract_ref: "p. 12: Stained poplar 2-panel solid doors ($12,500); 4 additional hollow-core doors ($904)"
+    photos: []
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-08
+    title: "Rear porch ceiling fan: one of two not installed"
+    area: "Exterior: Front & Porches"
+    type: Incomplete
+    contract: Schumacher
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      One of the two rear porch ceiling fans purchased for the home has not been
+      installed.
+    correction: >
+      Supply and install the missing fan and confirm proper operation.
+    contract_ref: "p. 4: Montague 60\" outdoor ceiling fan ×2, rear porch ($1,218)"
+    photos: [SR-08-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-09
+    title: "Rear roofline: visible dip; damaged fascia"
+    area: "Roof"
+    type: Defect
+    contract: Schumacher
+    trade: Framing / roofing
+    status: Open
+    description: >
+      A noticeable dip appears in the roofline when viewed from the rear of the
+      house. The fascia along the roofline also has visible damage.
+    correction: >
+      Have a qualified framing or roofing professional inspect the area to determine
+      whether framing, roof structure, or roofing installation is involved. Provide
+      written findings and correct any deficiency. Replace the damaged fascia.
+    contract_ref: ""
+    photos: [SR-09-a.jpg, SR-09-b.jpg, SR-09-c.jpg, SR-09-d.jpg, SR-09-e.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+      - { date: "2026-11-19", note: "Added damaged fascia to this item" }
+
+  - id: SR-10
+    title: "PVC pipe in front of rear basement window"
+    area: "Exterior: Rear & Sides"
+    type: Workmanship
+    contract: Schumacher
+    trade: Plumbing / site
+    status: Open
+    description: >
+      A PVC pipe protrudes from the ground directly in front of the rear basement
+      window.
+    correction: >
+      Identify the pipe's purpose and confirm it is properly terminated, protected,
+      and located without blocking the window or creating a safety or drainage
+      problem.
+    contract_ref: ""
+    photos: [SR-10-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-11
+    title: "Sump pump discharge: pipe ends next to the house"
+    area: "Exterior: Rear & Sides"
+    type: Incomplete
+    contract: Schumacher
+    trade: Plumbing / site drainage
+    status: Open
+    description: >
+      The sump pump discharge pipe sticks out about three feet from the house and
+      does not drain to any destination.
+    correction: >
+      Complete the discharge route so water is carried away from the foundation and
+      does not pool or flow back toward the house.
+    contract_ref: ""
+    photos: [SR-11-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-12
+    title: "Porch concrete forms: wood left in place"
+    area: "Exterior: Front & Porches"
+    type: Incomplete
+    contract: Schumacher
+    trade: Concrete
+    status: Open
+    description: >
+      Wood forms used to pour the front and rear porch concrete remain in place.
+    correction: >
+      Remove the remaining forms and clean and finish the exposed concrete edges
+      without damaging the concrete or adjacent finishes.
+    contract_ref: ""
+    photos: [SR-12-a.jpg, SR-12-b.jpg, SR-12-c.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-13
+    title: "Owner's bath floor register: does not fit opening"
+    area: "Owner's Suite"
+    type: Workmanship
+    contract: Schumacher
+    trade: HVAC / flooring
+    status: Open
+    description: >
+      The floor register in the toilet area does not fit the floor opening and sits
+      unevenly above the finished floor.
+    correction: >
+      Correct the opening or provide a properly sized register so it sits flush and
+      secure without damaging the flooring.
+    contract_ref: ""
+    photos: [SR-13-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-14
+    title: "Outlets and switches: uneven heights and mismatched plates"
+    area: "Great Room & Fireplace"
+    type: Workmanship
+    contract: Schumacher
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      Outlets and switch plates are uneven in highly visible locations, including
+      around the fireplace and below the picture window. At the fireplace, one side
+      has a triple switch and the other has a double and a single.
+    correction: >
+      Align plates consistently. Reconfigure the fireplace controls to two
+      triple-switch plates, as requested, with correct circuit labeling and function.
+    contract_ref: ""
+    photos: [SR-14-a.jpg, SR-14-b.jpg, SR-14-c.jpg, SR-14-d.jpg, SR-14-e.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-15
+    title: "Basement egress window: cement over frame; well missing security bolts"
+    area: "Basement"
+    type: Workmanship
+    contract: Schumacher
+    trade: Foundation / windows
+    status: Open
+    description: >
+      Cement has been applied over the egress window frame (inside view). From
+      outside, the egress well appears to be missing its security bolts.
+    correction: >
+      Remove or correct the excess material without damaging the frame, window
+      operation, drainage, or required egress clearance. Install the missing
+      security hardware.
+    contract_ref: "p. 6: Basement egress window system ($3,954): window, well, ladder, safety grate and cover"
+    photos: [SR-15-a.jpg, SR-15-b.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-16
+    title: "Kitchen island pendant: ceiling box poorly framed"
+    area: "Kitchen"
+    type: Workmanship
+    contract: Schumacher
+    trade: Electrical (Troyer) / drywall
+    status: Open
+    description: >
+      The box and framing around the center pendant over the island look unfinished
+      and poorly built.
+    correction: >
+      Verify the box is securely supported and properly positioned, and finish it
+      neatly and safely.
+    contract_ref: "p. 17: Cofield kitchen pendants ×3"
+    photos: [SR-16-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-18
+    title: "Granite countertops: gaps at walls beside refrigerator"
+    area: "Kitchen"
+    type: Workmanship
+    contract: Schumacher
+    trade: Countertops
+    status: Open
+    description: >
+      Visible gaps exist between the granite and the walls on both sides of the
+      refrigerator.
+    correction: >
+      Check whether the counters are positioned correctly and whether the gaps need
+      adjustment or a proper finished seal. Do not use excess caulk to hide a fit
+      problem.
+    contract_ref: "p. 11: Level 1 granite, Crema Pearl, entire kitchen"
+    photos: [SR-18-a.jpg, SR-18-b.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-19
+    title: "Great Room ceiling fan rough-in: no cover, box unfinished"
+    area: "Great Room & Fireplace"
+    type: Incomplete
+    contract: Schumacher
+    trade: Electrical (Troyer) / drywall
+    status: Open
+    description: >
+      The cover over the Great Room ceiling fan rough-in is missing, and the
+      surrounding box is unfinished.
+    correction: >
+      Finish the box, install the correct cover, and make sure the wiring is safely
+      enclosed.
+    contract_ref: ""
+    photos: [SR-19-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-20
+    title: "Owner's closet: drywall left open after electrical work"
+    area: "Owner's Suite"
+    type: Incomplete
+    contract: Schumacher
+    trade: Drywall / paint
+    status: Open
+    description: >
+      Drywall in the owner's closet remains open and damaged where the electrician
+      added a light switch and wiring that had been left out.
+    correction: >
+      Patch, sand, prime, and paint the area so it blends with the surrounding wall.
+    contract_ref: ""
+    photos: [SR-20-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-21
+    title: "Paint: thin coverage and paint on cabinets and trim"
+    area: "Whole House"
+    type: Workmanship
+    contract: Schumacher
+    trade: Painting
+    status: Open
+    description: >
+      Some walls have thin or missed paint coverage, and paint has been left on
+      cabinets and trim in multiple rooms. The photos are examples, not a complete
+      list.
+    correction: >
+      Touch up thin or missed areas and remove paint from cabinets and trim using
+      methods that will not damage the finishes.
+    contract_ref: "p. 18: Painting, two coats, SW7529 Sand Beach"
+    photos: [SR-21-a.jpg, SR-21-b.jpg, SR-21-c.jpg, SR-21-d.jpg, SR-21-e.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-22
+    title: "Trim, doors, and walls: scratches and dents"
+    area: "Whole House"
+    type: Workmanship
+    contract: Schumacher
+    trade: Finish carpentry / drywall
+    status: Open
+    description: >
+      Several areas of trim, doors (including the pantry door), and walls have
+      visible scratches or dents. The photos are examples, not a complete list.
+    correction: >
+      Repair or replace damaged sections and refinish to match adjacent surfaces.
+    contract_ref: ""
+    photos: [SR-22-a.jpg, SR-22-b.jpg, SR-22-c.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-23
+    title: "Garage overhead door: large gap at frame"
+    area: "Garage"
+    type: Defect
+    contract: Schumacher
+    trade: Garage door
+    status: Open
+    description: >
+      The gap around the garage door is large enough to fit part of a hand.
+    correction: >
+      Inspect the door, frame, alignment, and weather seals, and correct the gap for
+      a proper fit, weather protection, and security.
+    contract_ref: "p. 8: Included 16' × 7' insulated garage door"
+    photos: [SR-23-a.jpg, SR-23-b.jpg, SR-23-c.jpg, SR-23-d.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-24
+    title: "Siding: hole at corner near garage"
+    area: "Garage"
+    type: Defect
+    contract: Schumacher
+    trade: Siding
+    status: Open
+    description: >
+      There is a hole in the corner siding near the garage.
+    correction: >
+      Repair or replace the siding and make sure the exterior is sealed against
+      water and pests.
+    contract_ref: ""
+    photos: [SR-24-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-25
+    title: "Owner's bath tile: caulk and grout overruns, raised edges"
+    area: "Owner's Suite"
+    type: Workmanship
+    contract: Schumacher
+    trade: Tile
+    status: Open
+    description: >
+      Caulk and grout have spread onto adjacent tile surfaces in the owner's bath,
+      and one photo shows raised, unfinished edges.
+    correction: >
+      Clean and finish the tile work, preserve the grout joints, correct the raised
+      edges, and avoid scratching the tile.
+    contract_ref: "p. 16: Cannes Buff 12×12 tile, brushed nickel edge, Pale Umber #44 grout"
+    photos: [SR-25-a.jpg, SR-25-b.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-26
+    title: "TV outlet above fireplace: wrong box installed"
+    area: "Great Room & Fireplace"
+    type: Not as contracted
+    contract: Troyer (homeowner contract)
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      The TV outlet above the fireplace was supposed to be a 5×7-inch recessed box
+      with more than two standard outlets. A standard two-outlet receptacle was
+      installed instead.
+    correction: >
+      Install the agreed recessed box before the fireplace stonework is finished,
+      coordinated with the planned TV mount.
+    contract_ref: "Troyer agreement (homeowner-paid)"
+    photos: [SR-26-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-27
+    title: "Rear porch recessed lights: not aligned"
+    area: "Exterior: Front & Porches"
+    type: Workmanship
+    contract: Schumacher
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      The four recessed lights on the rear porch are visibly out of line.
+    correction: >
+      Measure consistently and align the fixtures before treating the installation
+      as complete.
+    contract_ref: "p. 4: Recessed light with white trim ×4 ($708)"
+    photos: [SR-27-a.jpg, SR-27-b.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-28
+    title: "Kitchen island: outlet not installed"
+    area: "Kitchen"
+    type: Incomplete
+    contract: Schumacher
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      There is no outlet on the outside of the kitchen island. The electrician said
+      one would be installed after the cabinets were in place to meet code.
+    correction: >
+      Confirm the code and contract requirements and install the outlet in an
+      accessible location.
+    contract_ref: ""
+    photos: []
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-29
+    title: "Outlet covers and exterior outlets: missing or unfinished"
+    area: "Whole House"
+    type: Incomplete
+    contract: Schumacher
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      Several outlet plates are still missing, and the exterior weatherproof outlets
+      shown are unfinished, even though most other plates have been installed.
+    correction: >
+      Install all plates and covers and verify each outlet is safely and neatly
+      finished.
+    contract_ref: "p. 19: Switch plate and outlet covers (entire home)"
+    photos: [SR-29-a.jpg, SR-29-b.jpg]
+    history:
+      - { date: "2026-11-19", note: "Listed in report" }
+
+  - id: SR-30
+    title: "Basement stairs: cracked and splintered treads"
+    area: "Basement"
+    type: Defect
+    contract: Schumacher
+    trade: Framing / carpentry
+    status: Open
+    description: >
+      Basement stair treads are cracked and splintered.
+    correction: >
+      Replace the damaged treads and confirm the stairs are sound.
+    contract_ref: ""
+    photos: [SR-30-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+
+  - id: SR-31
+    title: "Rear porch 30-amp heater outlet: not wired, exposed wires"
+    area: "Exterior: Front & Porches"
+    type: Incomplete
+    contract: Troyer (homeowner contract)
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      The 30-amp circuit for the rear porch heater has not been finished, and the
+      wires are exposed in the porch ceiling.
+    correction: >
+      Finish the 30-amp connection as agreed. Until then, make the exposed wiring
+      safe.
+    contract_ref: "Troyer agreement (homeowner-paid)"
+    photos: [SR-31-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+      - { date: "2026-11-19", note: "Wording updated" }
+
+
+  - id: SR-32
+    title: "Motion-sensor flood light: not installed (fixture provided)"
+    area: "Exterior: Rear & Sides"
+    type: Incomplete
+    contract: Troyer (homeowner contract)
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      The motion-sensor flood light has not been installed, even though the
+      homeowners provided the fixture.
+    correction: >
+      Install and test the motion-sensor flood light.
+    contract_ref: "Troyer agreement (homeowner-paid)"
+    photos: [SR-32-a.jpg, SR-32-b.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+      - { date: "2026-11-19", note: "Combined with flood light from SR-40 (same fixture); added second photo" }
+
+  - id: SR-33
+    title: "Quarter round: ends left raw and unstained"
+    area: "Whole House"
+    type: Workmanship
+    contract: Schumacher
+    trade: Finish carpentry
+    status: Open
+    description: >
+      The ends of the quarter round are not finished and have not been stained to
+      match the trim.
+    correction: >
+      Finish the ends properly and stain them to match the specified trim color.
+    contract_ref: "p. 12: \"Stain for trim and doors: Custom Finish-Natural blend stain with cabinet\""
+    photos: [SR-33-a.jpg, SR-33-b.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+
+  - id: SR-34
+    title: "Kitchen island trim: not stained"
+    area: "Kitchen"
+    type: Incomplete
+    contract: Schumacher
+    trade: Finish carpentry
+    status: Open
+    description: >
+      Trim on the kitchen island has been left unstained.
+    correction: >
+      Stain the trim to match the cabinets.
+    contract_ref: "p. 12: \"Stain for trim and doors: Custom Finish-Natural blend stain with cabinet\""
+    photos: [SR-34-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+
+  - id: SR-35
+    title: "Bedroom 3 window: large gap at top wall"
+    area: "Bedroom 3"
+    type: Workmanship
+    contract: Schumacher
+    trade: Drywall / trim
+    status: Open
+    description: >
+      There is a large gap along the top wall of the Bedroom 3 window.
+    correction: >
+      Close the gap and finish it so it matches the other windows.
+    contract_ref: ""
+    photos: [SR-35-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+      - { date: "2026-11-19", note: "Corrected location to top wall" }
+
+
+  - id: SR-36
+    title: "Generator inlet and lockout (interlock): not installed"
+    area: "Exterior: Rear & Sides"
+    type: Incomplete
+    contract: Troyer (homeowner contract)
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      The generator inlet and lockout were discussed on site and by phone and have
+      been paid for, but they have not been installed.
+    correction: >
+      Install the generator inlet and panel lockout as agreed.
+    contract_ref: "Troyer agreement (homeowner-paid)"
+    photos: [SR-36-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+
+  - id: SR-37
+    title: "EV charger circuit: 50-amp breaker installed instead of 60-amp hardwired"
+    area: "Garage"
+    type: Not as contracted
+    contract: Troyer (homeowner contract)
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      The homeowners have a 60-amp hardwired Tesla charger. A 50-amp breaker and
+      plug were installed instead, which limits charging to about 32 amps instead
+      of 48. The homeowners will mount the charger themselves.
+    correction: >
+      Install a 60-amp breaker and run the sheathed cable called for in Tesla's
+      installation guidelines to the charger location, with enough length to make
+      the connection.
+    contract_ref: "Troyer agreement (homeowner-paid)"
+    photos: [SR-37-a.jpg, SR-37-b.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+      - { date: "2026-11-19", note: "Added photo of installed 50-amp outlet" }
+
+
+  - id: SR-38
+    title: "Basement finish area: wet bar rough-in and steel beam no longer usable as planned"
+    area: "Basement"
+    type: Not as contracted
+    contract: Schumacher
+    trade: Design / coordination
+    status: Not correctable
+    description: >
+      The original drawings and final plans placed the wet bar and finishable area
+      here. Moving the electrical, well, and sewer to the same side of the house
+      removed the value of the wet-bar plumbing rough-in and the steel beam bought
+      for the finished area. The homeowners would not have bought these upgrades
+      had they known.
+    correction: >
+      Cannot be corrected at this stage. Resolution to be discussed for the upgrades
+      that no longer serve their intended purpose.
+    contract_ref: "p. 5: 8\" steel beam, 60 LF ($4,740); p. 16: Plumb for future bar sink in basement ($725)"
+    photos: [SR-38-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+
+  - id: SR-39
+    title: "Driveway: about 200 tons of additional gravel needed"
+    area: "Site & Driveway"
+    type: Not as contracted
+    contract: Schumacher
+    trade: Site / layout
+    status: Not correctable
+    description: >
+      About 200 tons of gravel had to be brought in to make the driveway usable, on
+      top of the gravel bought through Schumacher at the start of the project. The
+      site elevation should have led to the floor plan being reversed, as the
+      contract describes.
+    correction: >
+      Cannot be corrected at this stage. Resolution to be discussed.
+    contract_ref: "p. 5: Garage Left, \"The garage should be positioned on the high side of your homesite. This will be verified by your Personal Builder at your Homesite Inspection.\""
+    photos: [SR-39-a.jpg]
+    history:
+      - { date: "2026-11-19", note: "Added to report" }
+
+  - id: SR-40
+    title: "Porch outlets and under-counter lights: not wired"
+    area: "Exterior: Front & Porches"
+    type: Incomplete
+    contract: Troyer (homeowner contract)
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      The porch outlets and under-counter lights still need to be wired in. This may be work in progress, but it is listed so it can be
+      finished on the same return visit.
+    correction: >
+      Wire in and test the porch outlets and under-counter lights. (The flood light is tracked in SR-32.)
+    contract_ref: "Troyer agreement (homeowner-paid)"
+    photos: []
+    history:
+      - { date: "2026-11-18", note: "Raised with Troyer by email" }
+      - { date: "2026-11-19", note: "Added to report" }
+      - { date: "2026-11-19", note: "Flood light moved to SR-32 (same fixture as the motion-sensor light)" }
+
+
+  - id: SR-41
+    title: "Floor outlets (2): paid for, not installed"
+    area: "Great Room & Fireplace"
+    type: Incomplete
+    contract: Troyer (homeowner contract)
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      Two floor outlets have been paid for but not installed. The homeowners want
+      to be on site to show the crew exactly where they go.
+    correction: >
+      Schedule the return visit in advance so the homeowners can mark the outlet
+      locations, then install the outlets.
+    contract_ref: "Troyer agreement (homeowner-paid)"
+    photos: []
+    notes: "Location to be marked by homeowners on site."
+    history:
+      - { date: "2026-11-18", note: "Raised with Troyer by email" }
+      - { date: "2026-11-19", note: "Added to report" }
+
+  - id: SR-42
+    title: "Fireplace TV mount (MantelMount MM815 + RB100): rough-in needed before stone"
+    area: "Great Room & Fireplace"
+    type: Incomplete
+    contract: Schumacher
+    trade: Framing / electrical / stone coordination
+    status: Open
+    description: |
+      On September 8 we asked Hollie Curry, Steven Price, Steve Troyer, and Jessica Moore for help making sure we can install a MantelMount MM815 motorized drop-down TV mount with the RB100 recess box after closing. The mount arm folds back into a pocket in the wall so the TV sits nearly flush when raised. This needs three rough-in items, all before the stone goes on:
+      1. A framed opening 7.4" W × 28.2" H × 3.7" D, centered on the fireplace above the mantel. Exact height is set from the TV's lower VESA holes, roughly 8" above the mantel; we will confirm it against MantelMount's guide before any cutting.
+      2. Solid backing for the mount plate: two full-height studs 16"–24" on center on either side of the opening, plus horizontal blocking across a 36" span. The mount carries up to 115 lb of TV on a cantilevered motorized arm, so it cannot rely on drywall anchors or the stone alone.
+      3. A recessed combination box with 120V and low-voltage in separate compartments, about 24" off centerline: clear of the recess box, hidden behind the raised TV, and outside the firebox footprint so the conduit can drop straight down. See also SR-26.
+    correction: >
+      Complete the framing, blocking, and combination box rough-in before stone is
+      applied. If Schumacher cannot do this work, please give us the name and
+      contact information of the specific person we need to speak with.
+    contract_ref: "p. 3: Stone to one-story ceiling (stone not yet applied)"
+    links:
+      - { label: "MantelMount MM815 product page", url: "https://www.mantelmount.com/products/mm815-motorized-drop-down-swivel-tv-mount" }
+      - { label: "Example installation video", url: "https://www.youtube.com/watch?v=TGc9TN5YzM0" }
+    photos: []
+    notes: "Time-sensitive: must be done before fireplace stone is installed."
+    history:
+      - { date: "2026-09-08", note: "Requested from Hollie Curry, Steven Price, Steve Troyer, and Jessica Moore" }
+      - { date: "2026-11-19", note: "Added to report" }
