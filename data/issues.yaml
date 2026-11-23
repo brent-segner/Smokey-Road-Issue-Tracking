@@ -18,7 +18,7 @@ report:
   title: "Smokey Road Build: Outstanding Items & Correction Report"
   homeowners: "Deanna and Brent Segner"
   builder: "Schumacher Homes"
-  last_updated: "2026-11-20"
+  last_updated: "2026-11-23"
   # GitHub repo as owner/name. Used for the "Comment on this item" links.
   repo: "brent-segner/Smokey-Road-Issue-Tracking"
   intro: >
@@ -879,3 +879,67 @@ items:
     notes: "Photo shared with SR-36 (same exterior wall)."
     history:
       - { date: "2026-11-20", note: "Added to report" }
+
+  - id: SR-44
+    title: "Under-sink outlets: not enough for appliances; no path for dishwasher plug"
+    area: "Kitchen"
+    type: Incomplete
+    contract: Schumacher
+    trade: Electrical (Troyer)
+    status: Open
+    description: >
+      The cabinet under the kitchen sink has a single duplex outlet (labeled
+      "Dish"), which is not enough for the garbage disposal, instant hot water
+      dispenser, and reverse osmosis system. There is also no pathway for the
+      dishwasher's plug to reach an outlet under the sink. The photo also shows an
+      open junction box inside the cabinet with no cover.
+    correction: >
+      Provide enough outlets under the sink for the disposal, instant hot, and
+      reverse osmosis system (plus the dishwasher), and create a pathway for the
+      dishwasher cord. Install a cover on the open junction box.
+    contract_ref: ""
+    photos: [SR-44-a.jpg]
+    history:
+      - { date: "2026-11-23", note: "Added to report" }
+
+  - id: SR-45
+    title: "AC condenser: unit sits unevenly on wall-mounted bracket"
+    area: "Exterior: Rear & Sides"
+    type: Defect
+    contract: Schumacher
+    trade: HVAC
+    status: Open
+    description: >
+      The air conditioning condenser appears to be mounted unevenly on its
+      wall-mounted support bracket, which could make it unstable in high wind or if
+      it is bumped.
+    correction: >
+      Level the unit on the bracket and secure it per the manufacturer's installation
+      instructions, confirming the bracket is properly anchored to the foundation
+      wall.
+    contract_ref: ""
+    photos: [SR-45-a.jpg]
+    history:
+      - { date: "2026-11-23", note: "Added to report" }
+
+  - id: SR-46
+    title: "Gutter splash guard: set on open roof, not where runoff concentrates"
+    area: "Roof"
+    type: Workmanship
+    contract: Schumacher
+    trade: Gutters / roofing
+    status: Open
+    description: >
+      The gutter splash guard is installed on the open roof plane, away from the
+      corner where the roof meets the sidewall. That corner is where runoff
+      concentrates, so the guard does not appear to provide any overflow
+      protection in its current position.
+    correction: >
+      Move the splash guard to the point where runoff concentrates at the
+      roof-to-wall corner, and confirm that kickout flashing is installed at the
+      bottom of the wall so water is directed into the gutter rather than behind
+      the siding.
+    contract_ref: "p. 7: Included Soffits, Fascia and Downspouts"
+    photos: [SR-46-a.jpg]
+    history:
+      - { date: "2026-11-23", note: "Added to report" }
