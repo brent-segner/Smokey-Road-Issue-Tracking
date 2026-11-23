@@ -491,19 +491,25 @@ items:
       - { date: "2026-11-19", note: "Added to report" }
 
   - id: SR-23
-    title: "Garage overhead door: large gap at frame"
+    title: "Garage overhead door: gaps at frame and exposed wood trim"
     area: "Garage"
     type: Defect
     contract: Schumacher
     trade: Garage door
     status: Open
     description: >
-      The gap around the garage door is large enough to fit part of a hand.
+      The gap around the garage door is large enough to fit part of a hand. From
+      outside, there are visible gaps at both the top and bottom of the door, and
+      the white trim covering does not fully cover the wood frame, leaving bare
+      wood exposed along the door opening. A protruding nail is also visible at the
+      top corner.
     correction: >
-      Inspect the door, frame, alignment, and weather seals, and correct the gap for
-      a proper fit, weather protection, and security.
+      Inspect the door, frame, alignment, and weather seals, and correct the gaps
+      for a proper fit, weather protection, and security. Cover all exposed wood
+      with trim so it is protected from the weather, and remove or properly set the
+      protruding nail.
     contract_ref: "p. 8: Included 16' × 7' insulated garage door"
-    photos: [SR-23-a.jpg, SR-23-b.jpg, SR-23-c.jpg, SR-23-d.jpg]
+    photos: [SR-23-a.jpg, SR-23-b.jpg, SR-23-c.jpg, SR-23-d.jpg, SR-23-e.jpg, SR-23-f.jpg, SR-23-g.jpg, SR-23-h.jpg]
     history:
       - { date: "2026-11-19", note: "Added to report" }
 
