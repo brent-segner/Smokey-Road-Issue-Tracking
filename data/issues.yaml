@@ -18,7 +18,7 @@ report:
   title: "Smokey Road Build: Outstanding Items & Correction Report"
   homeowners: "Deanna and Brent Segner"
   builder: "Schumacher Homes"
-  last_updated: "2026-11-23"
+  last_updated: "2026-11-26"
   # GitHub repo as owner/name. Used for the "Comment on this item" links.
   repo: "brent-segner/Smokey-Road-Issue-Tracking"
   intro: >
@@ -152,6 +152,7 @@ items:
     photos: [SR-03-a.jpg]
     history:
       - { date: "2026-11-19", note: "Added to report" }
+      - { date: "2026-11-26", note: "Screens confirmed on site in the garage; open until installed and fit is verified" }
 
   - id: SR-04
     title: "Fireplace mantel: stain not applied"
@@ -173,22 +174,31 @@ items:
 
 
   - id: SR-05
-    title: "Gutter downspouts: drainage extensions not completed"
+    title: "Grade and downspouts: water ponds against the foundation"
     area: "Exterior: Rear & Sides"
     type: Incomplete
     contract: Schumacher
-    trade: Gutters / site drainage
+    trade: Grading / site drainage
     status: Open
-    description: >
-      Downspouts do not have completed discharge pipes and currently release water
-      directly beside the foundation.
+    description: |
+      After rain on November 26, water was ponding against the foundation wall at every downspout location. The ground around the house is flat or slopes toward the foundation, so water spreads along the wall instead of draining away.
+
+      The Residential Code of Ohio (R401.3) requires lots to be graded so surface water drains away from the foundation, with the grade falling at least 6 inches within the first 10 feet.
+
+      We understand the downspout extensions are outside the contract and will install them ourselves after closing. Extensions alone will not solve this if the grade still slopes toward the house.
     correction: >
-      Complete the discharge system and direct water away from the foundation,
-      consistent with the site drainage plan.
-    contract_ref: "p. 7: Included Soffits, Fascia and Downspouts"
-    photos: [SR-05-a.jpg]
+      Complete the final grade so the ground slopes away from the foundation on all
+      sides, meeting R401.3. Until the final grade is done, place splash blocks at
+      each downspout to keep water off the foundation. Confirm the date for the final
+      grade and how much of the Additional Grading Allowance has been used.
+    contract_ref: "p. 7: Included Soffits, Fascia and Downspouts; p. 23: Additional Grading Allowance ($2,000)"
+    photos: [SR-05-b.jpg, SR-05-c.jpg, SR-05-d.jpg, SR-05-a.jpg]
+    notes: "Final grade has not yet been scheduled. Keep this item open until the finished grade is confirmed to drain water away from the foundation."
     history:
       - { date: "2026-11-19", note: "Added to report" }
+      - { date: "2026-11-25", note: "Steven Price: downspout extensions are homeowner responsibility" }
+      - { date: "2026-11-26", note: "Water ponding at every downspout after rain; item expanded to cover grading; photos added" }
+
 
   - id: SR-06
     title: "Flooring: installed without required temperature control and acclimation"
