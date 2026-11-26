@@ -570,12 +570,16 @@ items:
       with more than two standard outlets. A standard two-outlet receptacle was
       installed instead.
     correction: >
-      Install the agreed recessed box before the fireplace stonework is finished,
-      coordinated with the planned TV mount.
+      Troyer has been paid for this work and should complete it. Replace the
+      receptacle with the agreed recessed box before the fireplace stone is
+      installed. Locate it as described in SR-42, item 3: about 24" off centerline,
+      clear of the TV mount recess opening, and hidden behind the raised TV. Confirm
+      the exact location with us before cutting.
     contract_ref: "Troyer agreement (homeowner-paid)"
     photos: [SR-26-a.jpg]
     history:
       - { date: "2026-11-19", note: "Added to report" }
+      - { date: "2026-11-26", note: "Homeowners still request that Troyer complete this item, since it was paid for and the wrong box was installed; location to be coordinated with SR-42" }
 
   - id: SR-27
     title: "Rear porch recessed lights: not aligned"
@@ -856,18 +860,25 @@ items:
     area: "Great Room & Fireplace"
     type: Incomplete
     contract: Schumacher
-    trade: Framing / electrical / stone coordination
+    trade: Framing (independent contractor, pending Schumacher approval)
     status: Open
     description: |
       On September 8 we asked Hollie Curry, Steven Price, Steve Troyer, and Jessica Moore for help making sure we can install a MantelMount MM815 motorized drop-down TV mount with the RB100 recess box after closing. The mount arm folds back into a pocket in the wall so the TV sits nearly flush when raised. This needs three rough-in items, all before the stone goes on:
       1. A framed opening 7.4" W × 28.2" H × 3.7" D, centered on the fireplace above the mantel. Exact height is set from the TV's lower VESA holes, roughly 8" above the mantel; we will confirm it against MantelMount's guide before any cutting.
       2. Solid backing for the mount plate: two full-height studs 16"–24" on center on either side of the opening, plus horizontal blocking across a 36" span. The mount carries up to 115 lb of TV on a cantilevered motorized arm, so it cannot rely on drywall anchors or the stone alone.
       3. A recessed combination box with 120V and low-voltage in separate compartments, about 24" off centerline: clear of the recess box, hidden behind the raised TV, and outside the firebox footprint so the conduit can drop straight down. See also SR-26.
+
+      We do not want Schumacher or Troyer to perform the framing and backing work in items 1 and 2. Given the lack of attention to detail we have documented in other areas of this project, we do not have confidence that this work would be completed correctly. Item 3 is covered under SR-26, since Troyer has already been paid for the recessed box and installed the wrong one.
     correction: >
-      Complete the framing, blocking, and combination box rough-in before stone is
-      applied. If Schumacher cannot do this work, please give us the name and
-      contact information of the specific person we need to speak with.
-    contract_ref: "p. 3: Stone to one-story ceiling (stone not yet applied)"
+      Do not perform the framing and backing work in items 1 and 2. Under paragraph
+      23 of the agreement, we cannot engage other contractors without Schumacher's
+      prior written consent. We respectfully request the name and contact information
+      of a contractor approved by Schumacher whom we can hire independently to
+      complete this work before the stone is installed, along with Schumacher's
+      written consent. We will provide the addendum, scope of work, insurance
+      certificates, and indemnification agreements that paragraph 23 requires.
+      Please do not install the stone until this work is complete.
+    contract_ref: "p. 3: Stone to one-story ceiling (stone not yet applied); p. 32, ¶23: Work Completed by Homeowner(s)"
     links:
       - { label: "MantelMount MM815 product page", url: "https://www.mantelmount.com/products/mm815-motorized-drop-down-swivel-tv-mount" }
       - { label: "Example installation video", url: "https://www.youtube.com/watch?v=TGc9TN5YzM0" }
@@ -876,6 +887,7 @@ items:
     history:
       - { date: "2026-09-08", note: "Requested from Hollie Curry, Steven Price, Steve Troyer, and Jessica Moore" }
       - { date: "2026-11-19", note: "Added to report" }
+      - { date: "2026-11-26", note: "Homeowners request that Schumacher and Troyer not perform the framing; asked for a Schumacher-approved contractor to hire independently" }
 
   - id: SR-43
     title: "Septic alarm: not installed or mounted"
