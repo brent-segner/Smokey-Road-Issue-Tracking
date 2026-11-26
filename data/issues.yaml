@@ -190,10 +190,11 @@ items:
       Complete the final grade so the ground slopes away from the foundation on all
       sides, meeting R401.3. Until the final grade is done, place splash blocks at
       each downspout to keep water off the foundation. Confirm the date for the final
-      grade and how much of the Additional Grading Allowance has been used.
+      grade and how much of the Additional Grading Allowance has been used. This
+      item stays open until the finished grade is confirmed to drain water away
+      from the foundation.
     contract_ref: "p. 7: Included Soffits, Fascia and Downspouts; p. 23: Additional Grading Allowance ($2,000)"
     photos: [SR-05-b.jpg, SR-05-c.jpg, SR-05-d.jpg, SR-05-a.jpg]
-    notes: "Final grade has not yet been scheduled. Keep this item open until the finished grade is confirmed to drain water away from the foundation."
     history:
       - { date: "2026-11-19", note: "Added to report" }
       - { date: "2026-11-25", note: "Steven Price: downspout extensions are homeowner responsibility" }
