@@ -18,7 +18,7 @@ report:
   title: "Smokey Road Build: Outstanding Items & Correction Report"
   homeowners: "Deanna and Brent Segner"
   builder: "Schumacher Homes"
-  last_updated: "2026-11-26"
+  last_updated: "2026-11-27"
   # GitHub repo as owner/name. Used for the "Comment on this item" links.
   repo: "brent-segner/Smokey-Road-Issue-Tracking"
   intro: >
@@ -50,6 +50,7 @@ areas:
   - "Great Room & Fireplace"
   - "Kitchen"
   - "Owner's Suite"
+  - "Junior Suite"
   - "Bedroom 3"
   - "Basement"
   - "Whole House"
@@ -972,3 +973,25 @@ items:
     photos: [SR-46-a.jpg]
     history:
       - { date: "2026-11-23", note: "Added to report" }
+
+  - id: SR-47
+    title: "Junior suite shower drain: not connected to plumbing"
+    area: "Junior Suite"
+    type: Incomplete
+    contract: Schumacher
+    trade: Plumbing
+    status: Open
+    description: >
+      The shower drain in the junior suite is not connected to the drain line. Seen
+      from the basement, the drain body comes through the subfloor with no trap or
+      pipe attached. It is the only shower or tub drain in the house without a
+      connection. If the shower were used now, the water would go straight onto
+      the basement floor.
+    correction: >
+      Install the trap and connect the drain to the drain and vent system. Test the
+      shower for leaks after the connection is made, and confirm it passes the
+      plumbing inspection.
+    contract_ref: "p. 14: 4 ft shower stall (2 included)"
+    photos: [SR-47-a.jpg]
+    history:
+      - { date: "2026-11-27", note: "Added to report" }
