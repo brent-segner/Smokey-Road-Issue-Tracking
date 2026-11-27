@@ -995,3 +995,23 @@ items:
     photos: [SR-47-a.jpg]
     history:
       - { date: "2026-11-27", note: "Added to report" }
+
+  - id: SR-48
+    title: "Owner's bath soaking tub: faucet and drain trim not installed"
+    area: "Owner's Suite"
+    type: Incomplete
+    contract: Schumacher
+    trade: Plumbing
+    status: Open
+    description: >
+      The deck-mounted faucet for the owner's bath soaking tub has not been
+      installed. The faucet and its parts are still boxed inside the tub, and the
+      overflow opening has no trim. This may still be in progress, but we are
+      listing it so it is not missed before completion.
+    correction: >
+      Install and connect the tub faucet, drain, and overflow trim. Test for leaks
+      and confirm hot and cold supply and drainage work correctly.
+    contract_ref: "p. 14: Woodhurst tub/deck-mounted faucet (stainless); p. 16: Mariposa soaking tub (60\" × 36\")"
+    photos: [SR-48-a.jpg]
+    history:
+      - { date: "2026-11-27", note: "Added to report" }
