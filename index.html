@@ -244,14 +244,14 @@ function mdLite(t){ // paragraphs and "- " bullet lists only
 function renderImpacts(){
   const I=DATA.impacts; if(!I||!(I.entries||[]).length) return;
   $("#impacts").innerHTML=`<h2>Ongoing concerns and lasting impacts</h2>${I.intro?`<p class="field">${esc(I.intro)}</p>`:""}`+
-    I.entries.map(e=>`<div class="impact"><h3>${esc(e.title)}</h3>${mdLite(e.text)}${(e.related||[]).length?`<p class="field"><span class="k">Related items</span>${e.related.map(r=>`<a href="#${esc(r)}">${esc(r)}</a>`).join(", ")}</p>`:""}</div>`).join("");
+    I.entries.map(e=>`<div class="impact"><h3>${esc(e.title)}</h3>${mdLite(e.text)}${(e.photos||[]).length?`<div class="photos">${e.photos.map(p=>`<a href="photos/${esc(p)}" target="_blank" rel="noopener"><img loading="lazy" src="photos/thumbs/${esc(p)}" alt="${esc(e.title)} photo"></a>`).join("")}</div>`:""}${(e.related||[]).length?`<p class="field"><span class="k">Related items</span>${e.related.map(r=>`<a href="#${esc(r)}">${esc(r)}</a>`).join(", ")}</p>`:""}</div>`).join("");
   $("#impacts").hidden=false;
 }
 
 // Lightbox
 let lbSet=[],lbI=0;
 function lbShow(){const it=items.find(x=>x.id===lbSet.id);const p=it.photos[lbI];$("#lb img").src="photos/"+p;$("#lb .cap").textContent=`${it.id}: photo ${lbI+1} of ${it.photos.length}`;}
-document.addEventListener("click",e=>{const a=e.target.closest(".photos a");if(!a)return;e.preventDefault();lbSet={id:a.dataset.id};lbI=+a.dataset.i;lbShow();$("#lb").classList.add("on")});
+document.addEventListener("click",e=>{const a=e.target.closest(".photos a");if(!a||!a.dataset.id)return;e.preventDefault();lbSet={id:a.dataset.id};lbI=+a.dataset.i;lbShow();$("#lb").classList.add("on")});
 $("#lb .x").onclick=()=>$("#lb").classList.remove("on");
 $("#lb").addEventListener("click",e=>{if(e.target.id==="lb")$("#lb").classList.remove("on")});
 const step=d=>{const it=items.find(x=>x.id===lbSet.id);lbI=(lbI+d+it.photos.length)%it.photos.length;lbShow()};
